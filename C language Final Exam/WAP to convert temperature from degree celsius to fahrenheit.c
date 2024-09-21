@@ -2,12 +2,28 @@
 //WAP to convert temperature from degree celsius to fahrenheit
 int main()
 {
-	float cel,fah;
-	printf("Enter Temperature In Celsius :");
-	scanf("%f",&cel);
+	int i;
 	
-	fah=((cel*9)/5)+32;
+	float celsius,fahrenheit;
+	start:
+	printf("\nEnter Temperature In Celsius :");
+	scanf("%f",&celsius);
 	
-	printf("\n\nThe Temperature in Fahrenheit After Conversion From Celsius is %.2f.",fah);
+	fahrenheit=((celsius*9)/5)+32;
+	
+	printf("\n\nThe Temperature in Fahrenheit After Conversion From Celsius is %.2f.",fahrenheit);
+	
+	printf("\nIf you want to continue enter 1 or 0 to exit :");
+	scanf("%d",&i);
+	
+	if(i==1)
+	{
+		goto start;
+	}
+	else
+	{
+		printf("\nThe Program Has Been Terminated!!\n");
+	}
 	return 0;
+	
 }
